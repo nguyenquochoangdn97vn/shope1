@@ -1,0 +1,144 @@
+/*mobile and tablet*/
+@media (max-width: 1023px){
+ 
+ 
+ .hide-on-mobile-table{
+    display: none;
+}
+.header{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+   }
+  .header__cart-list  {
+     position: fixed;
+     top: var(--header-height);
+     background-color: var( --white-color);
+     width: 100%;
+     right: 0;
+     border-radius: 2px;
+     box-shadow: 0 2px 10px #ccc;
+     display: none;
+     cursor: default;
+     padding: 0 calc((100% - 644px) / 2);
+     z-index: 1;
+ }
+ .header__cart-list::after{
+     display: none;
+ }
+ 
+  .header__sort-bar{
+      display: flex;
+  }
+ 
+  .app__container{
+     margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+ }
+ .app__content {
+  padding: 8px 0 0 0;
+}
+
+}
+/*tablet*/  
+@media (min-width: 740px) and (max-width: 1023px){
+  :root{
+    --header-height: 68px;
+    --navbar-height: 0px;
+ }
+  .hide-on-table{
+      display: none;
+  }
+  .header__cart {
+    width: 80px;
+    text-align: right;
+}
+}
+/*mobile*/
+@media (max-width: 739px){
+  :root{
+    --header-height: 54px;
+    --navbar-height: 0px;
+ }  
+  .hide-on-mobile{
+    display: none;
+  }
+  .header__with_search{
+    justify-content: space-between;
+  }
+  .header__logo, .header__cart{
+    width: unset ;
+  }
+  .header__mobile-search{
+    display: block;
+  }
+  .header__mobile-search-icon{
+    padding: 0 12px;
+  }
+  .header__logo-link{
+    display: block;
+    line-height: 0;
+  }
+  .header__search {
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    position: fixed;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    height: 46px;
+    padding: 0 16px;
+    z-index: 1 ;
+    animation: mobileSearchSideIn linear 0.3s;
+    display: none;
+  }
+  .header__search-history{
+    position: fixed;
+    width: 100%;
+    top: ca;
+    top: calc(var(--header-height) + var( --header-sort-bar-height));
+    left: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .header__search-checkbox:checked ~ .header__search{
+    display: flex;
+  }
+  .home-filter-row__pagination {
+    padding-left: 0;
+}
+  .pagination-item__link{
+    font-size: 1.6rem;
+    min-width: 36px;
+    height: 28px;
+  }
+  .pagination-item {
+    margin: 0 ;
+}
+.app__content {
+  margin: 0 4px;
+}
+  @keyframes mobileSearchSideIn {
+    from {
+      top: calc(var(--header-height) /2 );
+      opacity: 0;
+    }
+    to {
+      top: calc(var(--header-height));
+      opacity: 1;
+    }
+  }
+  .footer__heading{
+    text-align: center;
+  }
+  .footer__dowloat, .footer__list-item-link{
+    justify-content: center;
+  }
+  .footer__dowloat-app{
+    flex: unset;
+  }
+  .footer__dowloat-app-link{
+   padding: 6px 8px ;
+   display: block;
+  }
+  }
+ 
